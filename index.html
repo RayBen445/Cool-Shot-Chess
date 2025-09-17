@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Shot Chess</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Cool Shot Chess</h1>
+        <p>A Neumorphic Chess Experience</p>
+    </header>
+
+    <div class="container">
+        <div class="main-content neumorphic">
+            <div class="game-controls">
+                <button id="newGameBtn" class="control-btn">New Game</button>
+                <button id="toggleAIBtn" class="control-btn">Toggle AI</button>
+                <button id="undoBtn" class="control-btn">Undo</button>
+                <select id="difficultySelect" class="difficulty-select">
+                    <option value="1">Easy</option>
+                    <option value="2" selected>Medium</option>
+                    <option value="3">Hard</option>
+                </select>
+            </div>
+            
+            <div class="game-area">
+                <div class="game-board-container">
+                    <div class="game-info neumorphic-inset">
+                        <span id="currentPlayerDisplay">White's Turn</span>
+                        <span id="gameStatus">Game in progress</span>
+                        <span id="aiStatus">AI: Medium</span>
+                    </div>
+                    <div class="chess-board neumorphic"></div>
+                </div>
+
+                <div class="side-panel neumorphic">
+                    <div class="captured-pieces">
+                        <h4>Captured by White</h4>
+                        <div id="capturedBlack" class="pieces-display neumorphic-inset"></div>
+                    </div>
+                    <div class="captured-pieces">
+                        <h4>Captured by Black</h4>
+                        <div id="capturedWhite" class="pieces-display neumorphic-inset"></div>
+                    </div>
+                    <div class="moves-list">
+                        <h4>Moves List</h4>
+                        <div id="movesDisplay" class="neumorphic-inset"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <p>&copy; 2025 Cool Shot Systems. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
