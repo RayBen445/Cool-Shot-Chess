@@ -114,21 +114,28 @@ body {
 
 .chess-board {
     display: grid;
-    grid-template-columns: repeat(8, 50px);
-    grid-template-rows: repeat(8, 50px);
+    /* UPDATED: Use 1fr to divide space equally */
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    
+    /* UPDATED: Responsive width and aspect ratio */
+    width: min(90vw, 480px); /* 90% of viewport width, capped at 480px */
+    aspect-ratio: 1 / 1; /* Ensures the board is always a perfect square */
     border: none;
 }
 
 .chess-square {
-    width: 50px;
-    height: 50px;
+    /* REMOVED: width and height are now controlled by the grid */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    
+    /* UPDATED: Responsive font size */
+    font-size: min(7vw, 36px); /* Scales with screen, capped at 36px */
     cursor: pointer;
     position: relative;
 }
+
 
 .chess-square.light { background-color: #f0d9b5; }
 .chess-square.dark { background-color: #b58863; }
@@ -177,4 +184,4 @@ body {
     padding: 20px 0;
     margin-top: 20px;
     font-size: 0.9rem;
-}
+    }
